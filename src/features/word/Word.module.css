@@ -7,11 +7,11 @@
 }
 
 .word.dark {
-  color: #fff;
+  color: #eef2e6;
 }
 
 .word.light {
-  color: #000;
+  color: #263e35;
 }
 
 .word.correct {
@@ -23,9 +23,9 @@
 }
 
 .word.active.light {
-  background: #e0e0e0;
+  background: #e2eadd;
 }
 
 .word.active.dark {
-  background: #454545;
+  background: #43594a;
 }

@@ -1,20 +1,20 @@
 export const palette = {
     light: {
-        background: "#ffffff",
-        text: "#000000",
-        boxBorder: "#eeeeee",
-        highlight: "#e0e0e0",
-        timer: "#000000",
+        background: "#f6f5ef",
+        text: "#263e35",
+        boxBorder: "#d6dfd1",
+        highlight: "#e2eadd",
+        timer: "#385e4b",
         timerText: "#ffffff",
-        dropText: "#444444",
+        dropText: "#405b4b",
     },
     dark: {
-        background: "#212121",
-        text: "#ffffff",
-        boxBorder: "#323232",
-        highlight: "#272727",
-        timer: "#ffffff",
-        timerText: "#000000",
-        dropText: "#bbbbbb",
+        background: "#1e2b25",
+        text: "#eef2e6",
+        boxBorder: "#43594a",
+        highlight: "#304438",
+        timer: "#c8dcc0",
+        timerText: "#1e2b25",
+        dropText: "#d1dfcc",
     }   
 }

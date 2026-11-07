@@ -1,7 +1,8 @@
 .typingcontainer {
   display: inline-block;
   text-align: left;
-  border: 3px solid;
+  border: 1px solid;
+  border-radius: 16px;
   margin-bottom: 24px;
   width: 832px;
   max-width: 80vw;
@@ -83,6 +84,8 @@
 }
 
 .inputbar > input {
+  border-radius: 8px;
+  min-width: 0;
   font-size: 16px;
   transition: border 0.2s linear, background 0.2s linear;
   outline: none;
@@ -111,6 +114,8 @@
 }
 
 .time {
+  border-radius: 8px;
+  font-variant-numeric: tabular-nums;
   padding: 10px;
   margin: 0 10px;
   display: flex;
@@ -127,6 +132,8 @@
 }
 
 .redo {
+  border-radius: 8px;
+  padding: 8px 12px;
   transition: border 0.2s linear, background 0.2s linear, color 0.2s linear;
   text-align: center;
   text-decoration: none;
@@ -148,4 +155,18 @@
 
 .redo.dark:focus {
   border: 2px solid #ffffff;
+}
+
+@media (max-width: 600px) {
+  .inputbar {
+    gap: 12px;
+  }
+
+  .inputbar > input {
+    width: 100%;
+  }
+
+  .time {
+    margin-left: 0;
+  }
 }
