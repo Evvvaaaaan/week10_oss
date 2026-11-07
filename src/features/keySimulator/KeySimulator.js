@@ -329,38 +329,43 @@ function KeySimulator({ currentTheme, theme }) {
             </div>
           </div>
         </div>
-        <div className={styles.keyboardViewport} role="region" aria-label="Keyboard preview" tabIndex="0">
         <div
-          className={styles.keyboard}
-          style={keyboardStyle}
+          className={styles.keyboardViewport}
+          role="region"
+          aria-label="Keyboard preview"
+          tabIndex="0"
         >
-          {layout.map((row, index) => {
-            return (<div className={styles.keyrow} key={index}>
-              {
-                row.map((key) => {
-                  return (
-                    <Key
-                      key={key.keyid}
-                      className={key.class}
-                      legend={key.legend}
-                      sublegend={key.sublegend}
-                      width={key.width}
-                      height={key.height}
-                      x={key.x}
-                      y={key.y}
-                      keytopcolor={key.keytopcolor}
-                      keybordercolor={key.keybordercolor}
-                      textcolor={key.textcolor}
-                      pressed={key.pressed}
-                      mouseDown={handleKeyMouseDown}
-                      mouseUp={handleKeyMouseUp}
-                    />
-                  )
-                })
-              }
-            </div>)
-          })}
-        </div>
+          <div
+            className={styles.keyboard}
+            style={keyboardStyle}
+          >
+            {layout.map((row, index) => {
+              return (<div className={styles.keyrow} key={index}>
+                {
+                  row.map((key) => {
+                    return (
+                      <Key
+                        key={key.keyid}
+                        className={key.class}
+                        legend={key.legend}
+                        sublegend={key.sublegend}
+                        width={key.width}
+                        height={key.height}
+                        x={key.x}
+                        y={key.y}
+                        keytopcolor={key.keytopcolor}
+                        keybordercolor={key.keybordercolor}
+                        textcolor={key.textcolor}
+                        pressed={key.pressed}
+                        mouseDown={handleKeyMouseDown}
+                        mouseUp={handleKeyMouseUp}
+                      />
+                    )
+                  })
+                }
+              </div>)
+            })}
+          </div>
         </div>
         <ToastContainer />
       </div>
