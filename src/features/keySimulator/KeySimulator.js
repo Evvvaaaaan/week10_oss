@@ -20,6 +20,7 @@ import { ToastContainer, toast } from './../toast/toast.js';
 import Key from './../key/Key.js';
 import store from '../store/store';
 import styles from './KeySimulator.module.css';
+import StudyIntro from '../studyIntro/StudyIntro';
 const TypingTest = React.lazy(() => import('./../typingTest/TypingTest'));
 
 // initially render a keyboard
@@ -240,6 +241,7 @@ function KeySimulator({ currentTheme, theme }) {
       }}
     >
       <div className={styles.keycontainer}>
+        <StudyIntro theme={theme} />
         <Suspense fallback={
           <div 
             className={styles.typingplaceholder}
@@ -327,6 +329,7 @@ function KeySimulator({ currentTheme, theme }) {
             </div>
           </div>
         </div>
+        <div className={styles.keyboardViewport} role="region" aria-label="Keyboard preview" tabIndex="0">
         <div
           className={styles.keyboard}
           style={keyboardStyle}
@@ -357,6 +360,7 @@ function KeySimulator({ currentTheme, theme }) {
               }
             </div>)
           })}
+        </div>
         </div>
         <ToastContainer />
       </div>
