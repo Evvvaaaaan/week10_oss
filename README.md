@@ -43,7 +43,7 @@
 
 # Deployment
 
-- Vercel 배포 전입니다. 실제로 접근할 수 있는 배포 주소가 생성되면 추가할 예정입니다.
+- https://week10oss-qc69.vercel.app/
 
 # Weekly Review
 
