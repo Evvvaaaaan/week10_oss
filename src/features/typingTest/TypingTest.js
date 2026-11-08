@@ -219,7 +219,6 @@ function TypingTest({ currentTheme, theme }) {
             autoCapitalize="off"
             spellCheck="false"
             aria-label="Typing input"
-            placeholder="Type the highlighted word, then press Space"
             ref={inputRef}
           />
           <span className={styles.toolbar}>
@@ -240,7 +239,7 @@ function TypingTest({ currentTheme, theme }) {
                 color: theme.text
               }}
             >
-              Restart session
+              Redo
             </button>
           </span>
         </div>

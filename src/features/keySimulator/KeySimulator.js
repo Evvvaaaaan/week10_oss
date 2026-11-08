@@ -20,7 +20,6 @@ import { ToastContainer, toast } from './../toast/toast.js';
 import Key from './../key/Key.js';
 import store from '../store/store';
 import styles from './KeySimulator.module.css';
-import StudyIntro from '../studyIntro/StudyIntro';
 const TypingTest = React.lazy(() => import('./../typingTest/TypingTest'));
 
 // initially render a keyboard
@@ -241,7 +240,6 @@ function KeySimulator({ currentTheme, theme }) {
       }}
     >
       <div className={styles.keycontainer}>
-        <StudyIntro theme={theme} />
         <Suspense fallback={
           <div 
             className={styles.typingplaceholder}
@@ -330,42 +328,35 @@ function KeySimulator({ currentTheme, theme }) {
           </div>
         </div>
         <div
-          className={styles.keyboardViewport}
-          role="region"
-          aria-label="Keyboard preview"
-          tabIndex="0"
+          className={styles.keyboard}
+          style={keyboardStyle}
         >
-          <div
-            className={styles.keyboard}
-            style={keyboardStyle}
-          >
-            {layout.map((row, index) => {
-              return (<div className={styles.keyrow} key={index}>
-                {
-                  row.map((key) => {
-                    return (
-                      <Key
-                        key={key.keyid}
-                        className={key.class}
-                        legend={key.legend}
-                        sublegend={key.sublegend}
-                        width={key.width}
-                        height={key.height}
-                        x={key.x}
-                        y={key.y}
-                        keytopcolor={key.keytopcolor}
-                        keybordercolor={key.keybordercolor}
-                        textcolor={key.textcolor}
-                        pressed={key.pressed}
-                        mouseDown={handleKeyMouseDown}
-                        mouseUp={handleKeyMouseUp}
-                      />
-                    )
-                  })
-                }
-              </div>)
-            })}
-          </div>
+          {layout.map((row, index) => {
+            return (<div className={styles.keyrow} key={index}>
+              {
+                row.map((key) => {
+                  return (
+                    <Key
+                      key={key.keyid}
+                      className={key.class}
+                      legend={key.legend}
+                      sublegend={key.sublegend}
+                      width={key.width}
+                      height={key.height}
+                      x={key.x}
+                      y={key.y}
+                      keytopcolor={key.keytopcolor}
+                      keybordercolor={key.keybordercolor}
+                      textcolor={key.textcolor}
+                      pressed={key.pressed}
+                      mouseDown={handleKeyMouseDown}
+                      mouseUp={handleKeyMouseUp}
+                    />
+                  )
+                })
+              }
+            </div>)
+          })}
         </div>
         <ToastContainer />
       </div>
